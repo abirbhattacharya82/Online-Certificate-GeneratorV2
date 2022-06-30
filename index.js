@@ -10,11 +10,13 @@ app.get('/', (req, res, next) => {
     'Content-Type': 'application/pdf',
     'Content-Disposition': `attachment;filename=invoice.pdf`,
   });
+  
   pdfService.build(
     (chunk) => stream.write(chunk),
     () => stream.end(),
-    [req.headers['Name'],req.headers['Title'],req.headers['Detail'],req.headers['Instructor'],req.headers['template']]
+    req.headers['value']
   );
+  
 });
 
 app.listen(port);
