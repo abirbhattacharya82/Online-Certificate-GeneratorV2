@@ -10,7 +10,6 @@ app.get('/', (req, res, next) => {
     'Content-Type': 'application/pdf',
     'Content-Disposition': `attachment;filename=invoice.pdf`,
   });
-  
   pdfService.build(
     (chunk) => stream.write(chunk),
     () => stream.end(),
