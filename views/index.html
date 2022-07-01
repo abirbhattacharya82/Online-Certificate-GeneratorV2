@@ -4,16 +4,141 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *
+        {
+            margin: 0%;
+            padding: 0%;
+        }
+        .container
+        {
+            display: flex;
+        }
+        .left
+        {
+            background-image: linear-gradient(rgb(43, 3, 43),rgb(4, 4, 80));
+            width: 30%;
+            position: fixed;
+            height: 100%;
+        }
+        .left .head
+        {
+            color: white;
+            font-size: 300%;
+            border-bottom: 1px solid white;
+            padding: 2%;
+        }
+        .left form
+        {
+            text-align: center;
+            padding-left: 3%;
+            padding-right: 5%;
+            padding-top: 10%;
+            padding-bottom: 10%;
+            margin-top: 20%;
+            margin-left: 5%;
+            margin-right: 5%;
+            border: 1px solid white;
+            border-radius: 20px;
+            background-color: rgba(255,255,255,0.2);
+        }
+        .left form .inputs
+        {
+            border: 1px solid white;
+            width: 100%;
+            font-size: 150%;
+            background-color: transparent;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            padding: 1%;
+            color: white;
+        }
+        .left form .inputs:focus
+        {
+            outline: none;
+            background-color: transparent;
+        }
+        .button-type-a
+        {
+            border: none;
+            background-color: whit;
+            color: black;
+            width: 102.5%;
+            font-size: 150%;
+            margin-top: 2%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+        }
+        .container .right
+        {
+            margin-left: 30%;
+            width: 100%;
+        }
+        .container .right .head
+        {
+            font-size: 300%;
+            text-align: center;
+            padding: 2%;
+        }
+        .container .right .gallery
+        {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .container .right .gallery .image
+        {
+            width: 30%;
+            text-align: center;
+            font-size: 140%;
+            margin: 2%;
+            padding: 1%;
+            border: 1px solid rgb(117, 98, 101);
+        }
+        .container .right .gallery .image:hover
+        {
+            background-color: rgb(184, 181, 181);
+        }
+        .container .right .gallery .image img
+        {
+            width: 100%;
+        }
+    </style>
     <title>Online Certificate Generator</title>
 </head>
 <body>
-    <form action="post" method="post">
-        Kindly Enter the Following Datas <br>
-        <input type="text" name="title_of_Certificate" placeholder="Title"> <br>
-        <input type="text" name="name_of_Candidate" placeholder="Name"> <br>
-        <input type="text" name="details_of_Certificate" placeholder="Details of Certificate"> <br>
-        <input type="text" name="name_of_Instructor" placeholder="Instructor Name"> <br>
-        <input type="submit" class="button-type-a">
-    </form>
+    <div class="container">
+        <div class="left">
+            <div class="head">
+                Online Certificate Generate
+            </div>
+            <form action="post" method="post">
+                <input type="text" name="title_of_Certificate" placeholder="Title" class="inputs"> <br>
+                <input type="text" name="name_of_Candidate" placeholder="Name" class="inputs"> <br>
+                <input type="text" name="details_of_Certificate" placeholder="Details of Certificate" class="inputs"> <br>
+                <input type="text" name="name_of_Instructor" placeholder="Instructor Name" class="inputs"> <br>
+                <input type="submit" class="button-type-a">
+            </form>
+        </div>
+        <div class="right">
+            <div class="head">
+                Available Templates
+            </div>
+            <div class="gallery">
+                <div class="image">
+                    <img src="../service/assets/image/temp_1.png" alt=""> <br>
+                    Spring
+                </div>
+                <div class="image">
+                    <img src="../service/assets/image/temp_2.png" alt=""> <br>
+                    Gold
+                </div>
+                <div class="image">
+                    <img src="../service/assets/image/temp_3.png" alt=""> <br>
+                    Aura
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
