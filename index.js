@@ -3,6 +3,7 @@ const pdfService = require('./service/certificate-generate');
 const app=express();
 const cors=require('cors');
 app.use(cors());
+app.use("/service/assets/image",express.static("service/assets/image"));
 const port=process.env.PORT || 3000;
 
 const bodyparser=require('body-parser');
@@ -18,9 +19,11 @@ app.post('/post', encoder,(req, res, next) => {
   var name=req.body.name_of_Candidate;
   var detail=req.body.details_of_Certificate;
   var instructor=req.body.name_of_Instructor;
+  var template=req.body.temps;
+  
   var i_inst='['+instructor+']';
 
-  const arr=[name,title,detail,instructor,i_inst];
+  const arr=[name,title,detail,instructor,i_inst,template];
 
   const stream = res.writeHead(200, {
     'Content-Type': 'application/pdf',

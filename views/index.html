@@ -53,6 +53,19 @@
             padding: 1%;
             color: white;
         }
+        .left form select
+        {
+            border: 1px solid white;
+            background-color: transparent;
+            color: white;
+            font-size: 150%;
+            width: 102.5%;
+        }
+        .left form select option
+        {
+            background-color: rgba(255,255,255,0.1);
+            color: black;
+        }
         .left form .inputs:focus
         {
             outline: none;
@@ -117,6 +130,11 @@
                 <input type="text" name="name_of_Candidate" placeholder="Name" class="inputs"> <br>
                 <input type="text" name="details_of_Certificate" placeholder="Details of Certificate" class="inputs"> <br>
                 <input type="text" name="name_of_Instructor" placeholder="Instructor Name" class="inputs"> <br>
+                <select name="temps">
+                    <option value="spring">Spring</option>
+                    <option value="gold">Gold</option>
+                    <option value="aura">Aura</option>
+                </select>
                 <input type="submit" class="button-type-a">
             </form>
         </div>
