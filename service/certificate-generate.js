@@ -6,7 +6,7 @@ function build(dataCallback, endCallback, data) {
   doc.on('data', dataCallback);
   doc.on('end', endCallback);
 
-  console.log(data);
+  
 
   
     doc.image(__dirname+'/assets/image/temp_1.png',0,0,{width:850});
